@@ -1,0 +1,288 @@
+(venv) PS C:\Users\user\Videos\VocalInk02> python src/main.py
+Initializing Whisper model 'tiny'. This may involve a one-time download and will take a moment...
+Model loaded successfully.
+Key pressed: Key.ctrl_l
+Pressed keys: {<Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey activated! Calling on_press_callback.
+Started recording...
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.shift
+Pressed keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key released: Key.shift
+Pressed keys: {<Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Hotkey deactivated! Calling on_release_callback.
+Stopped recording.
+Transcription:  2, 3, 4, 5, 6, 7, 8
+Key pressed: Key.ctrl_l
+Pressed keys: {<Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: 'v'
+Pressed keys: {<Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key released: 'v'
+Pressed keys: {<Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key released: Key.ctrl_l
+Pressed keys: set()
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.ctrl_l
+Pressed keys: {<Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: '\x03'
+Pressed keys: {<Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key released: '\x03'
+Pressed keys: {<Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key released: Key.ctrl_l
+Pressed keys: set()
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.ctrl_l
+Pressed keys: {<Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: '\x03'
+Pressed keys: {<Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key released: Key.ctrl_l
+Pressed keys: set()
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key released: 'c'
+Pressed keys: set()
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.ctrl_r
+Pressed keys: {<Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: '\x03'
+Pressed keys: {<Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key released: '\x03'
+Pressed keys: {<Key.ctrl: <17>>}
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key released: Key.ctrl_r
+Pressed keys: set()
+Hotkey keys: {<Key.shift: <160>>, <Key.ctrl: <17>>}
+Key pressed: Key.ctrl_l

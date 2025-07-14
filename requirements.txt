@@ -1,0 +1,11 @@
+faster-whisper
+pyaudio
+pynput
+pyperclip
+pystray
+ttkbootstrap
+pydantic
+pytest
+ruff
+black
+pyinstaller
