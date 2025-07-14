@@ -28,3 +28,10 @@ models/
 
 # Ignore configuration files
 config.ini
+config.json
+
+# Ignore generated files
+output.wav
+log.txt
+delete_animation.py
+animation.py

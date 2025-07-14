@@ -6,19 +6,23 @@ A free, offline-first desktop dictation assistant that transforms any microphone
 
 *   **Real-time Speech-to-Text (STT):** Leverages `faster-whisper` for high-performance, low-latency transcription, enabling a near real-time dictation experience. The application is optimized for speed and accuracy, allowing you to speak naturally and see your words appear almost instantly.
 
-*   **Global Hotkey Capture:** Activate dictation with a customizable global hotkey combination (default: `Ctrl + Shift`). Simply press and hold the hotkey to begin recording your voice, and release it to stop recording and trigger the transcription process.
+*   **Advanced Global Hotkey Capture:** Activate dictation with a fully customizable global hotkey combination (default: `Ctrl + Shift`). The new settings GUI allows you to record single-key or multi-key hotkeys with ease. Simply press and hold the hotkey to begin recording your voice, and release it to stop recording and trigger the transcription process.
+
+*   **Sleek Recording Overlay:** A modern, always-on-top, pill-shaped overlay appears just above your taskbar when recording. It features a live, red waveform animation that provides subtle visual feedback, fading out smoothly when idle. This non-intrusive design ensures it never steals focus and remains visible even when interacting with other applications.
 
 *   **Clipboard Injection & Auto-Paste:** Once transcription is complete, VocalInk automatically copies the transcribed text to your clipboard and simulates a paste action (`Ctrl+V`). This allows the text to be inserted directly into the currently active text field of any application (e.g., word processors, email clients, web browsers, code editors).
 
 *   **System Tray & Headless Modes:** Runs discreetly in the system tray, consuming minimal system resources. A headless mode is also available for advanced users who prefer command-line operation or integration into custom workflows.
 
-*   **Intelligent Model & Microphone Management:** Automatically detects and utilizes the first available input audio device. Users can easily configure a preferred microphone and select from various Whisper model sizes (e.g., `tiny`, `base`, `small`, `medium`, `large`) to balance transcription accuracy and performance according to their system capabilities and needs.
+*   **Intelligent Model & Microphone Management:** Automatically detects and utilizes the first available input audio device. Users can easily configure a preferred microphone and select from various Whisper model sizes (e.g., `tiny`, `base`, `small`, `medium`, `large`) or choose an **"Auto"** option for automatic model selection, balancing transcription accuracy and performance according to their system capabilities and needs.
 
 *   **Robust Audio Pipeline:** Features a resilient audio processing pipeline, including a ring-buffer for continuous recording, optional Voice Activity Detection (VAD) for improved silence handling, and automatic stream re-opening to recover from audio input errors.
 
-*   **Persistent Configuration:** All application settings, including theme, hotkey combination, auto-launch options, and minimize-to-tray behavior, are easily configurable and persist across sessions through a simple `config.json` file and an intuitive settings window.
+*   **Persistent Configuration & Modern GUI:** All application settings, including theme, hotkey combination, auto-launch options, and minimize-to-tray behavior, are easily configurable and persist across sessions through a simple `config.json` file and an intuitive, sleek, and professional settings window built with `ttkbootstrap`.
 
-*   **Cross-Platform Compatibility:** Designed to run seamlessly on major operating systems, including Windows, macOS, and most Linux distributions, requiring Python 3.10 or newer.
+*   **Customizable Tray Icon:** Supports using a custom `logo.png` file in the `assets` folder for the system tray icon.
+
+*   **Cross-Platform Compatibility:** Designed to run seamlessly on major operating systems, including Windows, macOS, and most Linux distributions, requiring Python ≥ 3.10.
 
 *   **Fully Offline Operation:** After the initial download of the chosen Whisper model (which occurs only once), VocalInk operates entirely offline. No audio data or transcribed text ever leaves your local machine, ensuring maximum privacy and security.
 
@@ -66,24 +70,24 @@ To get VocalInk up and running on your system, follow these steps:
 
 Using VocalInk is straightforward:
 
-1.  **Start Dictation:** Press and hold your configured hotkey (default: `Ctrl + Shift`). You will see a visual indicator (if implemented) or hear a sound (if configured) confirming that recording has started.
+1.  **Start Dictation:** Press and hold your configured hotkey (default: `Ctrl + Shift`). The sleek recording overlay will appear, indicating active recording.
 
 2.  **Speak Clearly:** Dictate your text clearly into your microphone. Speak at a natural pace.
 
-3.  **Stop Dictation & Paste:** Release the hotkey. VocalInk will stop recording, process the audio, and automatically paste the transcribed text into the application where your cursor is currently active.
+3.  **Stop Dictation & Paste:** Release the hotkey. VocalInk will stop recording, process the audio, and automatically paste the transcribed text into the application where your cursor is currently active. The recording overlay will smoothly fade out.
 
 4.  **Access Settings:** Right-click on the VocalInk icon in your system tray to access the context menu. From here, you can:
-    *   **Settings:** Open the settings window to customize hotkeys, microphone, model size, theme, and other application behaviors.
+    *   **Settings:** Open the modern settings window to customize hotkeys, microphone, Whisper model size, UI theme, auto-launch behavior, and more.
     *   **Exit:** Close the VocalInk application.
 
 ## Configuration
 
 VocalInk's settings can be adjusted through its graphical settings window, accessible via the system tray icon. These settings are stored in `config.json` in the application's root directory. Key configurable options include:
 
-*   **`model_size`**: Choose your desired Whisper model size (`tiny`, `base`, `small`, `medium`, `large`). Larger models offer higher accuracy but require more computational resources and disk space.
+*   **`model_size`**: Choose your desired Whisper model size (`auto`, `tiny`, `base`, `small`, `medium`, `large`). Larger models offer higher accuracy but require more computational resources and disk space. The `auto` option will select a suitable default.
 *   **`mic_device`**: Select your preferred microphone by its index. This ensures VocalInk always uses the correct input device.
-*   **`hotkey`**: Customize the global hotkey combination that triggers recording (e.g., `<ctrl>+<alt>+t`).
-*   **`theme`**: Change the visual theme of the settings window.
+*   **`hotkey`**: Customize the global hotkey combination that triggers recording (e.g., `<ctrl>+<alt>+t`). The GUI allows you to record your desired combination.
+*   **`theme`**: Change the visual theme of the settings window (uses `ttkbootstrap` themes like `superhero`, `darkly`, `flatly`, etc.).
 *   **`auto_launch`**: Enable or disable VocalInk starting automatically with your system.
 *   **`minimize_to_tray`**: Control whether the settings window minimizes to the system tray or closes to the taskbar.
 

@@ -4,8 +4,12 @@ from faster_whisper import WhisperModel
 class Transcriber:
     """Transcribes audio using the faster-whisper library."""
 
-    def __init__(self, model_size="tiny"):
-        self.model_size = model_size
+    def __init__(self, configured_model_size="auto"):
+        self.configured_model_size = configured_model_size # Store the configured size
+        if configured_model_size == "auto":
+            self.model_size = "base" # Default to 'base' for auto
+        else:
+            self.model_size = configured_model_size
         print(f"Initializing Whisper model '{self.model_size}'. This may involve a one-time download and will take a moment...", flush=True)
         # Let WhisperModel handle caching in the default system location.
         # This ensures the model is only downloaded once.
