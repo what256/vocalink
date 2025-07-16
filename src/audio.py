@@ -35,32 +35,25 @@ class AudioRecorder:
         """Continuously reads audio data from the stream."""
         while self.recording:
             try:
-                data = self.stream.read(self.chunk_size)
+                data = self.stream.read(self.chunk_size, exception_on_overflow=False)
                 self.frames.append(data)
             except OSError as e:
-                if e.errno == -9999:
-                    print("PyAudio error -9999: Input overflowed. Retrying...")
-                    time.sleep(0.1)
-                else:
-                    raise
+                # This error can occur if the input buffer overflows.
+                # We can log it and continue, or simply ignore it.
+                print(f"PyAudio error: {e}. Continuing...")
+                time.sleep(0.1)
 
-    def stop_recording(self, output_filename="output.wav"):
-        """Stops recording and saves the audio to a file."""
+
+    def stop_recording(self):
+        """Stops recording and returns the recorded audio frames."""
+        if not self.recording:
+            return []
         self.recording = False
         if self.stream:
             self.stream.stop_stream()
             self.stream.close()
         self.stream = None
-        self.save_to_file(output_filename)
-
-    def save_to_file(self, filename):
-        """Saves the recorded audio frames to a WAV file."""
-        wf = wave.open(filename, "wb")
-        wf.setnchannels(self.channels)
-        wf.setsampwidth(self.p.get_sample_size(pyaudio.paInt16))
-        wf.setframerate(self.sample_rate)
-        wf.writeframes(b"".join(self.frames))
-        wf.close()
+        return list(self.frames)
 
     def list_microphones(self):
         """Returns a list of available input devices."""
@@ -71,5 +64,6 @@ class AudioRecorder:
                 mic_list.append(dev['name'])
         return mic_list
 
-    def __del__(self):
+    def close(self):
+        """Terminates the PyAudio instance."""
         self.p.terminate()
