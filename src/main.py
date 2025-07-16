@@ -164,8 +164,7 @@ class VocalInkApp(ctk.CTk):
     def apply_settings(self):
         """Applies the updated settings to the running application components."""
         # Re-initialize transcriber if model size changed or language changed
-        if self.transcriber.configured_model_size != self.config.model_size or \
-           self.transcriber.language != self.config.transcription_language:
+        if self.transcriber.configured_model_size != self.config.model_size or self.transcriber.language != self.config.transcription_language:
             self.transcriber = Transcriber(configured_model_size=self.config.model_size, language=self.config.transcription_language)
 
         # Re-initialize hotkey manager if hotkey changed
@@ -187,9 +186,12 @@ class VocalInkApp(ctk.CTk):
 
         print(self.localization_manager.get_string("settings_applied"), flush=True)
 
-if __name__ == "__main__":
+def main():
     app = VocalInkApp()
     try:
         app.mainloop() # Start the CustomTkinter mainloop
     except Exception as e:
         print(f"An unhandled error occurred: {e}", flush=True)
+
+if __name__ == "__main__":
+    main()

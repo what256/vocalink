@@ -4,8 +4,9 @@ from faster_whisper import WhisperModel
 class Transcriber:
     """Transcribes audio using the faster-whisper library."""
 
-    def __init__(self, configured_model_size="auto"):
+    def __init__(self, configured_model_size="auto", language="en"):
         self.configured_model_size = configured_model_size # Store the configured size
+        self.language = language
         if configured_model_size == "auto":
             self.model_size = "base" # Default to 'base' for auto
         else:

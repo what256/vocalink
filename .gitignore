@@ -1,37 +1,27 @@
-# Ignore Python artifacts
+# Python artifacts
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Ignore virtual environments
+# Virtual environments
 .env
 .venv
 venv/
 
-# Ignore build artifacts
+# Build artifacts
 dist/
 build/
 *.egg-info/
 
-# Ignore IDE files
+# IDE files
 .idea/
 .vscode/
 
-# Ignore test artifacts
+# Test artifacts
 .pytest_cache/
 .coverage
 htmlcov/
 
-# Ignore model files
-models/
-
-# Ignore configuration files
-config.ini
-config.json
-
-# Ignore generated files
+# Generated files
 output.wav
-log.txt
-delete_animation.py
-animation.py

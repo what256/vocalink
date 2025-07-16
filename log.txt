@@ -1,10 +1,10 @@
-PS C:\Users\user\Videos\VocalInk02> C:/Users/user/Videos/VocalInk02/venv/Scripts/python.exe -m pytest -v tests/test_latency.py
-================================================= test session starts =================================================
-platform win32 -- Python 3.11.9, pytest-8.4.1, pluggy-1.6.0 -- C:\Users\user\Videos\VocalInk02\venv\Scripts\python.exe
-cachedir: .pytest_cache
-rootdir: C:\Users\user\Videos\VocalInk02
-collected 1 item
-
-tests/test_latency.py::test_mic_to_paste_latency PASSED                                                          [100%]
-
-================================================= 1 passed in 12.08s ==================================================
+(venv) PS C:\Users\user\Videos\VocalInk02> python src/main.py
+Traceback (most recent call last):
+  File "C:\Users\user\Videos\VocalInk02\src\main.py", line 190, in <module>
+    app = VocalInkApp()
+          ^^^^^^^^^^^^^
+  File "C:\Users\user\Videos\VocalInk02\src\main.py", line 30, in __init__
+    self.transcriber = Transcriber(configured_model_size=self.config.model_size, language=self.config.transcription_language)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Transcriber.__init__() got an unexpected keyword argument 'language'
+(venv) PS C:\Users\user\Videos\VocalInk02>

@@ -1,0 +1,11 @@
+{
+    "model_size": "base",
+    "mic_device": null,
+    "hotkey": "<shift>",
+    "theme": "litera",
+    "auto_launch": true,
+    "minimize_to_tray": true,
+    "word_replacements": {},
+    "transcription_language": "auto",
+    "interface_language": "en"
+}
