@@ -31,4 +31,8 @@ dependencies = [
 "Bug Tracker" = "https://github.com/your-username/VocalInk/issues"
 
 [project.scripts]
-vocalink = "src.main:main"
+vocalink = "vocalink.main:main"
+
+[project.data]
+"vocalink.assets" = ["assets/*"]
+"vocalink.locales" = ["locales/*"]
