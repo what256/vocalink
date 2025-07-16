@@ -8,7 +8,7 @@ A free, offline-first desktop dictation assistant that transforms any microphone
 
 *   **Advanced Global Hotkey Capture:** Activate dictation with a fully customizable global hotkey combination (default: `Ctrl + Shift`). The new settings GUI allows you to record single-key or multi-key hotkeys with ease. Simply press and hold the hotkey to begin recording your voice, and release it to stop recording and trigger the transcription process.
 
-*   **Sleek Recording Overlay:** A modern, always-on-top, pill-shaped overlay appears just above your taskbar when recording. It features a live, red waveform animation that provides subtle visual feedback, fading out smoothly when idle. This non-intrusive design ensures it never steals focus and remains visible even when interacting with other applications.
+*   **Sleek Recording Overlay:** A modern, always-on-top, pill-shaped overlay, powered by PySide6, appears just above your taskbar when recording. It features a live, red waveform animation that provides subtle visual feedback, fading out smoothly when idle. This non-intrusive design ensures it never steals focus and remains visible even when interacting with other applications.
 
 *   **Clipboard Injection & Auto-Paste:** Once transcription is complete, VocalInk automatically copies the transcribed text to your clipboard and simulates a paste action (`Ctrl+V`). This allows the text to be inserted directly into the currently active text field of any application (e.g., word processors, email clients, web browsers, code editors).
 

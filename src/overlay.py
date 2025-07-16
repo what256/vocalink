@@ -1,52 +1,73 @@
-import tkinter as tk
+import customtkinter as ctk
 import math
 import time
 
-class RecordingOverlay(tk.Toplevel):
+class RecordingOverlay(ctk.CTkToplevel):
     """A sleek, always-on-top, pill-shaped overlay with a live waveform animation."""
 
     def __init__(self, parent):
-        super().__init__(parent)
+        super().__init__(parent) # Inherit from CTkToplevel
         self.parent = parent
         self.recording_active = False
         self.alpha = 0.0  # Initial transparency
         self.fade_speed = 0.05  # How fast it fades in/out
         self.animation_speed = 50  # Milliseconds per animation frame
 
-        # Configure window properties
+        # Configure window properties directly on self (the CTkToplevel)
         self.overrideredirect(True)  # Remove window decorations
         self.attributes('-topmost', True)  # Always on top
         self.attributes('-alpha', self.alpha)  # Set initial transparency
         self.wm_attributes("-transparentcolor", "#000001")  # Set a transparent color key
         self.attributes('-toolwindow', True) # Prevent from appearing in taskbar (Windows)
 
-        self.width = 150  # Smaller width
-        self.height = 30  # Smaller height
-        self.canvas = tk.Canvas(self, width=self.width, height=self.height, bg="#000001", highlightthickness=0)
-        self.canvas.pack()
+        self.width = 180  # Slightly wider
+        self.height = 35  # Slightly taller
 
-        self.geometry(f"{self.width}x{self.height}")
+        # Create a CTkCanvas as a child of this Toplevel window
+        self.canvas = ctk.CTkCanvas(self, width=self.width, height=self.height, highlightthickness=0, bg="#000001") # Use transparent color key
+        self.canvas.pack(fill="both", expand=True)
+
         self.update_idletasks()
         self._position_window()
 
+        # Add rounded rectangle drawing method to canvas
+        self.canvas.create_rounded_rectangle = self._create_rounded_rectangle_on_canvas
+
         # Initial drawing of the pill shape (with shadow)
-        # Shadow: slightly larger, offset, darker oval
-        self.shadow_id = self.canvas.create_oval(2, 2, self.width + 2, self.height + 2, fill="#444444", outline="") # Softer, slightly lighter shadow
-        self.pill_id = self.canvas.create_oval(0, 0, self.width, self.height, fill="#333333", outline="")
+        self.shadow_id = self.canvas.create_rounded_rectangle(5, 5, self.width + 5, self.height + 5, radius=25, fill="#000000", outline="") # Deeper shadow
+        self.pill_id = self.canvas.create_rounded_rectangle(0, 0, self.width, self.height, radius=25, fill="#2C2C2C", outline="") # Refined pill color
         self.waveform_id = None
+
+    def _create_rounded_rectangle_on_canvas(self, x1, y1, x2, y2, radius, **kwargs):
+        """Helper to draw a rounded rectangle on the canvas."""
+        points = [
+            x1 + radius, y1,
+            x2 - radius, y1,
+            x2, y1 + radius,
+            x2, y2 - radius,
+            x2 - radius, y2,
+            x1 + radius, y2,
+            x1, y2 - radius,
+            x1, y1 + radius,
+            x1 + radius, y1
+        ]
+        return self.canvas.create_polygon(points, smooth=True, **kwargs)
 
     def _position_window(self):
         """Positions the window at the bottom-center, just above the taskbar."""
         screen_width = self.winfo_screenwidth()
         screen_height = self.winfo_screenheight()
 
-        bottom_offset = 20  # Pixels above the taskbar (increased for more clearance)
-        taskbar_height_estimate = 40 # Estimate for Windows taskbar height
+        bottom_offset = -160  # Adjusted for better positioning
+        taskbar_height_estimate = 0 # Estimate for Windows taskbar height.
 
-        x = (screen_width - self.width) // 2 # Center horizontally
-        y = screen_height - taskbar_height_estimate - self.height - bottom_offset
-
+        x = (screen_width - self.width) // 2 + 200 # Center horizontally and shift to the right
+        y = screen_height - self.height - bottom_offset - taskbar_height_estimate
         self.geometry(f"+{x}+{y}")
+
+        print(f"Screen: {screen_width}x{screen_height}, Overlay: {self.width}x{self.height}", flush=True)
+        print(f"Calculated position: x={x}, y={y}", flush=True)
+        print(f"Bottom offset: {bottom_offset}, Taskbar estimate: {taskbar_height_estimate}", flush=True)
 
     def show_overlay(self):
         """Starts showing the overlay and waveform animation."""
@@ -81,7 +102,7 @@ class RecordingOverlay(tk.Toplevel):
             # Ensure waveform is cleared when fully faded out
             if self.waveform_id: self.canvas.delete(self.waveform_id)
             self.waveform_id = None
-            self.withdraw() # Hide the window completely when faded out
+            self.after(100, self.withdraw) # Add a small delay before withdrawing
 
     def _animate_waveform(self):
         """Draws a simulated live red waveform animation."""
@@ -94,26 +115,26 @@ class RecordingOverlay(tk.Toplevel):
 
         points = []
         center_y = self.height / 2
-        amplitude = self.height / 3
-        num_points = 50
+        amplitude_base = self.height / 2.5 # Adjusted for new height
+        num_points = 60 # More points for smoother waveform
         x_step = self.width / num_points
-        current_time = time.time() * 5 # Base time for animation
+        current_time = time.time() * 7 # Faster animation for more dynamism
 
-        # Draw multiple lines for a fuller waveform
-        for line_offset in [-0.5, 0, 0.5]: # Draw 3 slightly offset lines
+        # Draw multiple lines for a fuller, more organic waveform
+        for line_offset in [-0.8, -0.4, 0, 0.4, 0.8]: # Draw 5 slightly offset lines for more depth
             points = []
-            amplitude_factor = 1.0 - abs(line_offset) * 0.4 # Reduce amplitude for outer lines
-            amplitude = (self.height / 3) * amplitude_factor
+            amplitude_factor = 1.0 - abs(line_offset) * 0.2 # Reduce amplitude for outer lines
+            amplitude = amplitude_base * amplitude_factor
 
             for i in range(num_points):
                 x = i * x_step
-                # More complex sine wave with multiple frequencies for a richer look
-                y = center_y                     + amplitude * math.sin(i * 0.3 + current_time + line_offset * 2)                     + (amplitude / 2) * math.sin(i * 0.8 + current_time * 1.5 + line_offset * 3)
+                # More complex sine wave with multiple frequencies and a slight random component
+                y = center_y                     + amplitude * math.sin(i * 0.25 + current_time + line_offset * 2.5)                     + (amplitude / 2.5) * math.sin(i * 0.75 + current_time * 1.8 + line_offset * 3.5)                     + (amplitude / 5) * math.sin(i * 1.5 + current_time * 3.0 + line_offset * 5)
                 points.append((x, y))
 
             # Draw the waveform as a line with a tag
             if points:
-                self.canvas.create_line(points, fill="#FF4444", width=2, smooth=True, tags="waveform")
+                self.canvas.create_line(points, fill="#00FF00", width=2, smooth=True, tags="waveform") # Bright green waveform # Bright green waveform
 
         self.after(self.animation_speed, self._animate_waveform)
 

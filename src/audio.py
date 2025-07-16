@@ -46,7 +46,11 @@ class AudioRecorder:
 
     def stop_recording(self, output_filename="output.wav"):
         """Stops recording and saves the audio to a file."""
+        if not self.recording:
+            return
         self.recording = False
+        # Add a small delay to ensure the recording loop has time to exit
+        time.sleep(0.1)
         if self.stream:
             self.stream.stop_stream()
             self.stream.close()

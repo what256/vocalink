@@ -12,6 +12,9 @@ class AppConfig(BaseModel):
     theme: str = Field("superhero", description="UI theme for the settings window.")
     auto_launch: bool = Field(False, description="Launch the application on system startup.")
     minimize_to_tray: bool = Field(True, description="Minimize the settings window to the system tray.")
+    word_replacements: dict = Field({}, description="Custom dictionary for word replacement.")
+    transcription_language: str = Field("en", description="Language for transcription (e.g., 'en', 'es', 'fr').")
+    interface_language: str = Field("en", description="Language for the user interface (e.g., 'en', 'es', 'fr').")
 
 
 def load_config(path: str = "config.json") -> AppConfig:
