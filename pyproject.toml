@@ -30,3 +30,6 @@ vocalink = "vocalink.main:run"
 
 [tool.setuptools]
 packages = ["vocalink"]
+
+[tool.setuptools.package-data]
+"vocalink.assets" = ["logo.png"]
