@@ -49,15 +49,11 @@ class VocalInkApp(ctk.CTk):
 
     def _create_tray_icon(self):
         """Creates the system tray icon."""
-        try:
-            import importlib.resources as pkg_resources
-        except ImportError:
-            # Try backported version for older Python versions
-            import importlib_resources as pkg_resources
+        import importlib.resources
 
         try:
             # Use importlib.resources to get the path to the asset
-            with pkg_resources.files('vocalink.assets').joinpath('logo.png').open('rb') as icon_file:
+            with importlib.resources.files('vocalink.assets').joinpath('logo.png').open('rb') as icon_file:
                 image = Image.open(icon_file)
         except FileNotFoundError:
             print("WARNING: Icon file not found. Using a placeholder. Expected at vocalink/assets/logo.png", flush=True)
