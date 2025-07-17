@@ -186,12 +186,15 @@ class VocalInkApp(ctk.CTk):
 
         print(self.localization_manager.get_string("settings_applied"), flush=True)
 
-def main():
+def run():
     app = VocalInkApp()
     try:
         app.mainloop() # Start the CustomTkinter mainloop
     except Exception as e:
         print(f"An unhandled error occurred: {e}", flush=True)
+
+def main():
+    run()
 
 if __name__ == "__main__":
     main()
