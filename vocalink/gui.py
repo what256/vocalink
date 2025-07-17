@@ -1,9 +1,9 @@
 import customtkinter as ctk
 import tkinter as tk
-from src.config import AppConfig, save_config
-from src.audio import AudioRecorder
+from vocalink.config import AppConfig, save_config
+from vocalink.audio import AudioRecorder
 from pynput import keyboard
-from src.localization import LocalizationManager
+from vocalink.localization import LocalizationManager
 
 class SettingsWindow(ctk.CTkToplevel):
     """Settings window for the application using CustomTkinter."""

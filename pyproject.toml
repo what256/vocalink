@@ -12,14 +12,13 @@ authors = [
   { name="Your Name", email="you@example.com" }
 ]
 dependencies = [
-  "whisper",
-  "keyboard",
-  "pyautogui",
-  "pynput",
-  "torch",
-  "sounddevice",
+  "pystray",
+  "pydantic",
+  "faster-whisper",
+  "customtkinter",
   "pyaudio",
-  "openai-whisper"
+  "pynput",
+  "pyperclip"
 ]
 
 [project.urls]
