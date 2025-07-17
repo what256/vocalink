@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "vocalink"
-version = "0.1.1"
+version = "0.1.2"
 description = "Voice input into any text field using hotkey + Whisper"
 readme = "README.md"
 license = "MIT"
@@ -29,7 +29,8 @@ BugTracker = "https://github.com/what256/vocalink/issues"
 vocalink = "vocalink.main:run"
 
 [tool.setuptools]
-packages = ["vocalink", "vocalink.assets"]
+packages = ["vocalink", "vocalink.assets", "vocalink.locales"]
 
 [tool.setuptools.package-data]
 "vocalink.assets" = ["logo.png"]
+"vocalink.locales" = ["*.json"]

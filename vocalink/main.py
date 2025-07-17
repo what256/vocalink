@@ -53,8 +53,8 @@ class VocalInkApp(ctk.CTk):
 
         try:
             # Use importlib.resources to get the path to the asset
-            with importlib.resources.files('vocalink.assets').joinpath('logo.png').open('rb') as icon_file:
-                image = Image.open(icon_file)
+            icon_path = importlib.resources.files('vocalink.assets').joinpath('logo.png')
+            image = Image.open(icon_path).copy()
         except FileNotFoundError:
             print("WARNING: Icon file not found. Using a placeholder. Expected at vocalink/assets/logo.png", flush=True)
             image = Image.new("RGB", (64, 64), "black")
