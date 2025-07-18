@@ -37,7 +37,7 @@ To start VocalInk:
 
 vocalink
 
-Then press the configured hotkey (default: Ctrl+Shift+V) to begin and stop recording. Your voice will be transcribed instantly and pasted into the currently active window or input field.
+Then hold the configured hotkey (default: Ctrl + Shift) to start recording, and release it to stop. Your voice will be transcribed instantly and pasted into the currently active window or input field.
 
 ⸻
 
