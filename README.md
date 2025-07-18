@@ -35,7 +35,6 @@ pip install vocalink
 
 To start VocalInk:
 
-vocalink
 
 Then hold the configured hotkey (default: Ctrl + Shift) to start recording, and release it to stop. Your voice will be transcribed instantly and pasted into the currently active window or input field.
 
